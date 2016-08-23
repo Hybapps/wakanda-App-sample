@@ -1,0 +1,172 @@
+{
+	"toJSON": true,
+	"extraProperties": {
+		"version": "2",
+		"classes": {
+			"Users": {
+				"panelColor": "#BFBFBF",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 10,
+						"Y": 27
+					}
+				}
+			},
+			"Services": {
+				"panelColor": "#D7E3BC",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 17,
+						"Y": 210
+					}
+				}
+			},
+			"Blogs": {
+				"panelColor": "#76923C",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 29,
+						"Y": 66
+					}
+				}
+			}
+		},
+		"model": {
+			"scriptMode": "manual",
+			"workspaceLeft": 0,
+			"workspaceTop": 0,
+			"lastScriptLocation": {
+				"Users": {
+					"events": "Users/Users-events.js"
+				}
+			}
+		}
+	},
+	"dataClasses": [
+		{
+			"name": "Blogs",
+			"className": "Blogs",
+			"collectionName": "BlogsCollection",
+			"matchTable": "Blog,Blog",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "blogId",
+					"kind": "storage",
+					"matchColumn": "ID",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "blogImg",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				},
+				{
+					"name": "blogTitle",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"type": "string"
+				},
+				{
+					"name": "blogDate",
+					"kind": "storage",
+					"scope": "public",
+					"type": "date",
+					"simpleDate": false
+				},
+				{
+					"name": "blogDetails",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "blogAdd",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"className": "Services",
+			"collectionName": "ServicesCollection",
+			"matchTable": "Serves,Serves,Categorys,Category",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "servName",
+					"kind": "storage",
+					"matchColumn": "catName",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "servImage",
+					"kind": "storage",
+					"matchColumn": "catImage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "servdetails",
+					"kind": "storage",
+					"matchColumn": "servStatus,catStatus",
+					"scope": "public",
+					"type": "string"
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"className": "Users",
+			"collectionName": "UsersCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "firstName",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "lastName",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			]
+		}
+	],
+	"type": []
+}
